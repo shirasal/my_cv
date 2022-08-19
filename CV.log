@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.19)  19 AUG 2022 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.19)  19 AUG 2022 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -823,31 +823,31 @@ LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/it' will be
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 494.
+(Font)              <7> on input line 493.
+
+Overfull \hbox (9.77357pt too wide) in alignment at lines 493--493
+[][] 
+ []
+
 
 Overfull \hbox (9.77357pt too wide) in alignment at lines 494--494
 [][] 
  []
 
-
-Overfull \hbox (9.77357pt too wide) in alignment at lines 495--495
-[][] 
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+Raleway-TLF on input line 519.
+LaTeX Font Info:    Trying to load font information for TS1+Raleway-TLF on input line 518.
 (c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/raleway/TS1Raleway-TLF.fd
 File: TS1Raleway-TLF.fd 2014/07/28 (autoinst) Font definitions for TS1/Raleway-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 519.
+(Font)              scaled to size 10.0pt on input line 518.
 
-Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 563.
+Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 562.
 
-LaTeX Font Info:    Trying to load font information for U+fontawesomethree on input line 576.
+LaTeX Font Info:    Trying to load font information for U+fontawesomethree on input line 575.
 (c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome/ufontawesomethree.fd
 File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
 )
-Overfull \hbox (134.03741pt too wide) in paragraph at lines 572--577
+Overfull \hbox (134.03741pt too wide) in paragraph at lines 571--576
 [] [][][][][][] 
  []
 
@@ -855,7 +855,7 @@ Overfull \hbox (134.03741pt too wide) in paragraph at lines 572--577
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.587 \end{document}
+l.586 \end{document}
                      [2] (./CV.aux)
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: B7992DF54F3BB0D401ED0502AEBB3159;3537.
@@ -869,7 +869,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  84i,12n,89p,434b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomethree.enc}{c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/raleway/a_2bcjq6.enc}{c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/raleway/a_bzmckq.enc} <c:/Users/shira/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk>{c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/raleway/a_yqxcf3.enc}<c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb><c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/impallari/raleway/Raleway-Bold.pfb><c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/impallari/raleway/Raleway-Italic.pfb><c:/Users/shira/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on CV.pdf (2 pages, 92092 bytes).
+Output written on CV.pdf (2 pages, 92056 bytes).
 PDF statistics:
  181 PDF objects out of 1000 (max. 8388607)
  151 compressed objects within 2 object streams
