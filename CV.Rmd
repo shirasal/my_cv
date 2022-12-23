@@ -3,10 +3,9 @@ name: Shira
 surname: Salingre
 position: "Marine Ecologist | Data Analyst"
 email: "shira.salin@gmail.com"
-twitter: shira_salin
+www: shirasal.github.io
 github: shirasal
 linkedin: shira-salingre
-date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::latexcv:
     theme: classic
