@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.23)  23 DEC 2022 18:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.23)  11 JAN 2023 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -842,10 +842,10 @@ LaTeX Font Info:    Font shape `TS1/Raleway-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 518.
 
 Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 562.
+(fancyhdr)                Please consider using the `twoside' option on input line 564.
 
 
-Overfull \hbox (134.03741pt too wide) in paragraph at lines 571--575
+Overfull \hbox (134.03741pt too wide) in paragraph at lines 573--577
 [] [][][][][][] 
  []
 
@@ -853,7 +853,7 @@ Overfull \hbox (134.03741pt too wide) in paragraph at lines 571--575
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.585 \end{document}
+l.587 \end{document}
                      [2] (./CV.aux)
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: B7992DF54F3BB0D401ED0502AEBB3159;3537.
@@ -867,7 +867,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  84i,12n,89p,434b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/raleway/a_2bcjq6.enc}{c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/raleway/a_bzmckq.enc} <c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk>{c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/raleway/a_yqxcf3.enc}<c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb><c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/impallari/raleway/Raleway-Bold.pfb><c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/impallari/raleway/Raleway-Italic.pfb><c:/Users/shirasalin/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on CV.pdf (2 pages, 91344 bytes).
+Output written on CV.pdf (2 pages, 91430 bytes).
 PDF statistics:
  177 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams

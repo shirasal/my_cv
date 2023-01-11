@@ -107,10 +107,11 @@ During my Masters studies I learned and practiced most of my data science skills
 
 ### Data processing, analysis and visualisation
 -   **R language, RStudio, Rmarkdown**.
--   Spreadsheet software: **Microsoft Excel, Google Sheets**.
+-   Spreadsheet softwares: **Microsoft Excel, Google Sheets**.
 -   Geographical information systems (**GIS**): qGIS, ArcGIS.
+-   **GitHub** repositories, version control and collaboration tools
 -   Basic understanding of **SQL**
--   **GitHub** repositories and collaboration tools
+-   Data analysis with **Python** (namely pandas library)
 
 ### Science communication
 -   Public speaking
@@ -121,7 +122,7 @@ During my Masters studies I learned and practiced most of my data science skills
 ### Natural languages
 -   English: proficient, fluent.
 -   Hebrew: native.
--   Spanish (Castellano): beginner.
+-   Spanish (Castellano): beginner (B1).
 
 ```{r include=FALSE}
 # From the original template
