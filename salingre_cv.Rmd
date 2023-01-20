@@ -1,0 +1,78 @@
+---
+name: Shira
+surname: Salingre
+# position: "Data Analyst"
+address: "Barcelona, Catalunya, Spain"
+profilepic: ShiraPhoto.jpg
+www: shirasal.github.io
+email: "shira.salin@outlook.com"
+twitter: shira_salin
+github: shirasal
+linkedin: shira-salingre
+# date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: "Data analyst with quantitative research background. Organised, curious and passionate person. **Love turning DATA into KNOWLEDGE**."
+output: vitae::twentyseconds
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(here)
+library(readxl)
+
+```
+
+
+```{r functions}
+readExcelSheets <- function(filename){
+  # read all sheets in .xlsx 
+  all <- readxl::excel_sheets(filename)
+  # import each sheet into a list using readxl::read_excel
+  list <- lapply(all, function(x) readxl::read_excel(filename, sheet = x))
+  # save sheet name for each sheet (list)
+  names(list) <- all
+  # breaks up list and creates a dataframe for each sheet with df names matching sheet names
+  list2env(list, envir = .GlobalEnv)
+}
+
+```
+
+
+```{r load-data, message=F, results='hide'}
+
+filename <- here::here("shira_salingre_cv_data.xlsx")
+readExcelSheets(filename)
+
+```
+
+# Experience
+
+```{r}
+industry %>% 
+  detailed_entries(what = role,
+                   when = paste(start_date, end_date, sep = "-"),
+                   with = institution,
+                   where = where,
+                   why = details)
+```
+
+# Education
+
+```{r}
+education %>% 
+  detailed_entries(what = degree,
+                   when = year,
+                   with = institution,
+                   where = where,
+                   why = details)
+```
+
+<!-- # Skills -->
+
+<!-- ```{r} -->
+<!-- skills %>%  -->
+<!--   brief_entries(what = skill, -->
+<!--                 with = level) -->
+
+<!-- ``` -->
+
