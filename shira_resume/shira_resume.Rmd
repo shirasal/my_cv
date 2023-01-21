@@ -5,7 +5,7 @@ surname: Salingre
 address: "Barcelona, Catalunya, Spain"
 www: shirasal.github.io
 email: "shira.salin@outlook.com"
-twitter: shira_salin
+# twitter: shira_salin
 github: shirasal
 linkedin: shira-salingre
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -88,7 +88,6 @@ industry %>%
                    why = details)
 ```
 
-\newpage
 
 # Education
 
@@ -101,3 +100,6 @@ education %>%
                    why = details)
 
 ```
+
+#### More info and some examples of my work can be found in my linktree profile: https://linktr.ee/shirasal
+
