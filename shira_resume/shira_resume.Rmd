@@ -1,0 +1,103 @@
+---
+name: Shira
+surname: Salingre
+# position: "Data Analyst"
+address: "Barcelona, Catalunya, Spain"
+www: shirasal.github.io
+email: "shira.salin@outlook.com"
+twitter: shira_salin
+github: shirasal
+linkedin: shira-salingre
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "74c5c3"
+output: 
+  vitae::awesomecv:
+    page_total: true
+always_allow_html: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(vitae)
+library(here)
+
+```
+
+```{r functions}
+readExcelSheets <- function(filename){
+  # read all sheets in .xlsx 
+  all <- readxl::excel_sheets(filename)
+  # import each sheet into a list using readxl::read_excel
+  list <- lapply(all, function(x) readxl::read_excel(filename, sheet = x))
+  # save sheet name for each sheet (list)
+  names(list) <- all
+  # breaks up list and creates a dataframe for each sheet with df names matching sheet names
+  list2env(list, envir = .GlobalEnv)
+}
+
+```
+
+```{r load-data, message=F, results='hide'}
+
+filename <- here::here("shira_salingre_cv_data.xlsx")
+readExcelSheets(filename)
+
+```
+
+# Short introduction
+
+-   Data analyst with quantitative research background.
+-   Organised, curious and passionate person.
+-   **Love turning DATA into KNOWLEDGE**.
+
+<!-- # Professional Summary -->
+
+<!-- This is a good opportunity to introduce yourself professionally and summarise -->
+
+<!-- why your skills are well suited to the job you are applying for!") -->
+
+## Tech skills
+
+```{r skills, out.width = '30%', out.height= '15%'}
+skills %>%
+  mutate(level_prop = level/5) %>%
+  ggplot() + aes(x = level_prop, y = reorder(skill, level), label = level) +
+  geom_bar(stat = "identity", fill = "#418180") + 
+  geom_label(label.r = unit(.5, "lines"), color = "#418180") +
+  labs(x = "", y = "") +
+  theme_minimal() + theme(panel.grid = element_blank(), panel.background = element_rect(colour = "#ffffff"),
+                          axis.text.x = element_blank(), axis.text.y = element_text(size = 20))
+
+```
+
+## Soft skills
+* Organised, self-managed, reliable
+* Nice, friendly and open-minded
+* Great communication skills
+* Results oriented
+
+# Experience
+
+```{r}
+industry %>% 
+  detailed_entries(what = institution,
+                   when = paste(start_date, end_date, sep = "-"),
+                   with = role,
+                   where = where,
+                   why = details)
+```
+
+\newpage
+
+# Education
+
+```{r}
+education %>% 
+  detailed_entries(what = institution,
+                   when = year,
+                   with = degree,
+                   where = where,
+                   why = details)
+
+```
