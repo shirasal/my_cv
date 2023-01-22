@@ -57,26 +57,6 @@ readExcelSheets(filename)
 
 <!-- why your skills are well suited to the job you are applying for!") -->
 
-## Tech skills
-
-```{r skills, out.width = '30%', out.height= '15%'}
-skills %>%
-  mutate(level_prop = level/5) %>%
-  ggplot() + aes(x = level_prop, y = reorder(skill, level), label = level) +
-  geom_bar(stat = "identity", fill = "#418180") + 
-  geom_label(label.r = unit(.5, "lines"), color = "#418180") +
-  labs(x = "", y = "") +
-  theme_minimal() + theme(panel.grid = element_blank(), panel.background = element_rect(colour = "#ffffff"),
-                          axis.text.x = element_blank(), axis.text.y = element_text(size = 20))
-
-```
-
-## Soft skills
-* Organised, self-managed, reliable
-* Nice, friendly and open-minded
-* Great communication skills
-* Results oriented
-
 # Experience
 
 ```{r}
@@ -101,5 +81,27 @@ education %>%
 
 ```
 
-#### More info and some examples of my work can be found in my linktree profile: https://linktr.ee/shirasal
+# Skills
 
+## Tech skills
+
+```{r skills, out.width = '30%', out.height= '15%'}
+skills %>%
+  mutate(level_prop = level/5) %>%
+  ggplot() + aes(x = level_prop, y = reorder(skill, level), label = level) +
+  geom_bar(stat = "identity", fill = "#418180") + 
+  geom_label(label.r = unit(.5, "lines"), color = "#418180") +
+  labs(x = "", y = "") +
+  theme_minimal() + theme(panel.grid = element_blank(), panel.background = element_rect(colour = "#ffffff"),
+                          axis.text.x = element_blank(), axis.text.y = element_text(size = 20))
+
+```
+
+
+## Soft skills
+* Organised, self-managed, reliable
+* Nice, friendly and open-minded
+* Great communication skills
+* Results oriented
+
+#### Some of my work can be found here: https://linktr.ee/shirasal
