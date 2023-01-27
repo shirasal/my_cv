@@ -47,9 +47,9 @@ readExcelSheets(filename)
 
 # Short introduction
 
--   Data analyst with quantitative research background.
--   Organised, curious and passionate person.
--   **Love turning DATA into KNOWLEDGE**.
+- Data analyst with quantitative research background.
+- Organised, curious and passionate person.
+- **Love turning DATA into KNOWLEDGE**.
 
 <!-- # Professional Summary -->
 
@@ -68,6 +68,7 @@ industry %>%
                    why = details)
 ```
 
+\pagebreak
 
 # Education
 
@@ -97,11 +98,24 @@ skills %>%
 
 ```
 
-
 ## Soft skills
-* Organised, self-managed, reliable
+* Organised, self-managed and reliable
 * Nice, friendly and open-minded
 * Great communication skills
-* Results oriented
+* Results oriented and passionate about data
+* Curious and ever-learning
 
-#### Some of my work can be found here: https://linktr.ee/shirasal
+**\textcolor{awesome-emerald}{Some of my work can be found here: https://linktr.ee/shirasal}**  
+
+# Extra fun stuff
+
+```{r}
+volunteer %>% 
+  detailed_entries(what = institution,
+                   when = paste(start_date, end_date, sep = "-"),
+                   with = role,
+                   where = where,
+                   why = details)
+
+```
+
