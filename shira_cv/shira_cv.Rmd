@@ -99,9 +99,10 @@ skills %>%
 ```
 
 ## Soft skills
+* Pro-active
 * Organised, self-managed and reliable
 * Nice, friendly and open-minded
-* Great communication skills
+* Great communicator
 * Results oriented and passionate about data
 * Curious and ever-learning
 
