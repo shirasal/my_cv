@@ -1,10 +1,11 @@
 ---
 name: Shira
 surname: Salingre
-# position: "Data Analyst"
-address: "Barcelona, Catalunya, Spain"
+position: "Data Analyst"
+address: "Barcelona, Catalonia, Spain"
 www: shirasal.github.io
-email: "shira.salin@outlook.com"
+email: "shira.salin@gmail.com"
+phone: "+34-603-522-149"
 # twitter: shira_salin
 github: shirasal
 linkedin: shira-salingre
@@ -21,6 +22,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(tidyverse)
 library(vitae)
 library(here)
+library(kableExtra)
 
 ```
 
@@ -47,9 +49,9 @@ readExcelSheets(filename)
 
 # Short introduction
 
-- Data analyst with quantitative research background.
-- Organised, curious and passionate person.
-- **Love turning DATA into KNOWLEDGE**.
+-   Data analyst with quantitative research background.
+-   Organised, curious and passionate person.
+-   **Love turning DATA into KNOWLEDGE**.
 
 <!-- # Professional Summary -->
 
@@ -68,8 +70,6 @@ industry %>%
                    why = details)
 ```
 
-\pagebreak
-
 # Education
 
 ```{r}
@@ -84,39 +84,38 @@ education %>%
 
 # Skills
 
-## Tech skills
-
-```{r skills, out.width = '30%', out.height= '15%'}
+```{r, fig.width = 7, fig.asp = .3}
 skills %>%
-  mutate(level_prop = level/5) %>%
-  ggplot() + aes(x = level_prop, y = reorder(skill, level), label = level) +
-  geom_bar(stat = "identity", fill = "#418180") + 
-  geom_label(label.r = unit(.5, "lines"), color = "#418180") +
+  select(Type, Skill, Score) %>% 
+  mutate(rank_order = Score) %>% 
+  expand(nesting(Type, Skill, rank_order), Score = 1:5) %>%
+  left_join(mutate(skills %>% select(Type, Skill, Score), achieved = TRUE)) %>%
+  group_by(Type, Skill) %>%
+  mutate(achieved = lag(cumsum(coalesce(achieved, FALSE)) < 1, default = TRUE)) %>% 
+  ggplot() +
+  aes(x = Score, y = reorder(Skill, rank_order), color = achieved) + 
+  geom_point(size = 4) +
+  facet_wrap(~Type, scales = "free", strip.position = "right") +
   labs(x = "", y = "") +
-  theme_minimal() + theme(panel.grid = element_blank(), panel.background = element_rect(colour = "#ffffff"),
-                          axis.text.x = element_blank(), axis.text.y = element_text(size = 20))
+  scale_x_continuous(expand = expansion(add = 0.5)) +
+  scale_color_manual(values = c("transparent", "#74c5c3"), guide = "none") +
+  theme_minimal() + 
+  theme(
+    axis.text.x = element_blank(),
+    axis.ticks = element_blank(),
+    strip.background = element_rect(fill = "lightgray", color = NA),
+    strip.text = element_text(face = "bold"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
 
 ```
 
 ## Soft skills
-* Pro-active
-* Organised, self-managed and reliable
-* Nice, friendly and open-minded
-* Great communicator
-* Results oriented and passionate about data
-* Curious and ever-learning
 
-**\textcolor{awesome-emerald}{Some of my work can be found here: https://linktr.ee/shirasal}**  
-
-# Extra fun stuff
-
-```{r}
-volunteer %>% 
-  detailed_entries(what = institution,
-                   when = paste(start_date, end_date, sep = "-"),
-                   with = role,
-                   where = where,
-                   why = details)
-
-```
-
+-   Pro-active
+-   Organised, self-managed and reliable
+-   Nice, friendly and open-minded
+-   Great communicator
+-   Results oriented and passionate about data
+-   Curious and ever-learning
