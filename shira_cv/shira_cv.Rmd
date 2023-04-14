@@ -1,14 +1,14 @@
 ---
 name: Shira
 surname: Salingre
-position: "Data Analyst"
+position: "Marine Ecologist | Data Analyst"
 address: "Barcelona, Catalonia, Spain"
 www: shirasal.github.io
 email: "shira.salin@gmail.com"
 phone: "+34-603-522-149"
-# twitter: shira_salin
 github: shirasal
 linkedin: shira-salingre
+aboutme: Turning DATA into KNOWLEDGE
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "74c5c3"
 output: 
@@ -47,24 +47,46 @@ readExcelSheets(filename)
 
 ```
 
-# Short introduction
-
--   Data analyst with quantitative research background.
--   Organised, curious and passionate person.
--   **Love turning DATA into KNOWLEDGE**.
+<!-- # Short introduction -->
 
 <!-- # Professional Summary -->
 
-<!-- This is a good opportunity to introduce yourself professionally and summarise -->
+# Resume Objective
 
-<!-- why your skills are well suited to the job you are applying for!") -->
+-   Data analyst with over 5 years experience in quantitative research (ecology).
+-   Enthusiastic, curious, independent and organised, analytical thinker and with great communication skills.
+-   Seeking to contribute to a good cause while working in a fun and supportive environment.
+
+# Technical Skills
+
+```{r}
+skills %>% 
+  mutate(Area = factor(Area, levels = c("Coding Languages", "Software", "Other"))) %>% 
+  filter(Type == "Tech Stack") %>% 
+  arrange(Area, desc(Proficiency)) %>% 
+  select(Area, Skill) %>% 
+  pivot_wider(names_from = Area, values_from = Skill, values_fn = list) %>% 
+  kable(booktabs = T, align = "c", escape = F, format = "latex") %>%
+  kable_styling(full_width = F, font_size = 9,latex_options = "hold_position") %>% 
+  row_spec(0, bold = T, color = "#82bfbe", hline_after = F) %>% 
+  row_spec(1, bold = F, color = "#7f7f7f") %>% 
+    column_spec(column = 1:3, width = "5cm")
+
+# skills %>% 
+#   filter(Type == "Soft Skills") %>% 
+#   brief_entries(what = Skill)
+  
+```
 
 # Experience
 
 ```{r}
-industry %>% 
+experience %>% 
+  arrange(desc(end_date), start_date, institution) %>% 
+  mutate(start_date = as.character(start_date)) %>% 
+  mutate(when = if_else(start_date == end_date, start_date, paste(start_date, end_date, sep = "-"))) %>% 
   detailed_entries(what = institution,
-                   when = paste(start_date, end_date, sep = "-"),
+                   when = when,
                    with = role,
                    where = where,
                    why = details)
@@ -74,48 +96,8 @@ industry %>%
 
 ```{r}
 education %>% 
-  detailed_entries(what = institution,
+  vitae::brief_entries(what = degree,
                    when = year,
-                   with = degree,
-                   where = where,
-                   why = details)
+                   with = institution)
 
 ```
-
-# Skills
-
-```{r, fig.width = 7, fig.asp = .3}
-skills %>%
-  select(Type, Skill, Score) %>% 
-  mutate(rank_order = Score) %>% 
-  expand(nesting(Type, Skill, rank_order), Score = 1:5) %>%
-  left_join(mutate(skills %>% select(Type, Skill, Score), achieved = TRUE)) %>%
-  group_by(Type, Skill) %>%
-  mutate(achieved = lag(cumsum(coalesce(achieved, FALSE)) < 1, default = TRUE)) %>% 
-  ggplot() +
-  aes(x = Score, y = reorder(Skill, rank_order), color = achieved) + 
-  geom_point(size = 4) +
-  facet_wrap(~Type, scales = "free", strip.position = "right") +
-  labs(x = "", y = "") +
-  scale_x_continuous(expand = expansion(add = 0.5)) +
-  scale_color_manual(values = c("transparent", "#74c5c3"), guide = "none") +
-  theme_minimal() + 
-  theme(
-    axis.text.x = element_blank(),
-    axis.ticks = element_blank(),
-    strip.background = element_rect(fill = "lightgray", color = NA),
-    strip.text = element_text(face = "bold"),
-    panel.grid.major.x = element_blank(),
-    panel.grid.minor.x = element_blank()
-  )
-
-```
-
-## Soft skills
-
--   Pro-active
--   Organised, self-managed and reliable
--   Nice, friendly and open-minded
--   Great communicator
--   Results oriented and passionate about data
--   Curious and ever-learning
