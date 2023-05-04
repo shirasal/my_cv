@@ -1,7 +1,7 @@
 ---
 name: Shira
 surname: Salingre
-position: "Marine Ecologist | Data Analyst"
+position: "Data Specialist | Marine Scientist"
 address: "Barcelona, Catalonia, Spain"
 www: shirasal.github.io
 email: "shira.salin@gmail.com"
