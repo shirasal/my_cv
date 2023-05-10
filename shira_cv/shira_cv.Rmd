@@ -8,7 +8,7 @@ email: "shira.salin@gmail.com"
 phone: "+34-603-522-149"
 github: shirasal
 linkedin: shira-salingre
-aboutme: Turning DATA into KNOWLEDGE
+# aboutme: Turning DATA into KNOWLEDGE
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "74c5c3"
 output: 
@@ -47,11 +47,11 @@ readExcelSheets(filename)
 
 ```
 
-<!-- # Short introduction -->
-
 <!-- # Professional Summary -->
 
-# Resume Objective
+<!-- # Resume Objective -->
+
+# Short introduction
 
 -   Data analyst with over 5 years experience in quantitative research (ecology).
 -   Enthusiastic, curious, independent and organised, analytical thinker and with great communication skills.
@@ -70,7 +70,7 @@ skills %>%
   kable_styling(full_width = F, font_size = 9,latex_options = "hold_position") %>% 
   row_spec(0, bold = T, color = "#82bfbe", hline_after = F) %>% 
   row_spec(1, bold = F, color = "#7f7f7f") %>% 
-    column_spec(column = 1:3, width = "5cm")
+  column_spec(column = 1:3, width = "5.5cm")
 
 # skills %>% 
 #   filter(Type == "Soft Skills") %>% 
@@ -100,4 +100,20 @@ education %>%
                    when = year,
                    with = institution)
 
+```
+
+# Languages
+
+```{r}
+skills %>% 
+  mutate(Area = factor(Area, levels = c("Coding Languages", "Software", "Other"))) %>% 
+  filter(Type == "Language") %>% 
+  arrange(Area, desc(Proficiency)) %>% 
+  select(Skill, Proficiency) %>% 
+  kable(booktabs = T, align = "l", format = "latex") %>%
+  kable_styling(full_width = F, font_size = 9, latex_options = "hold_position") %>% 
+  row_spec(0, bold = T, color = "#82bfbe", hline_after = F) %>% 
+  column_spec(column = 1:2, width = "6cm")
+
+  
 ```
